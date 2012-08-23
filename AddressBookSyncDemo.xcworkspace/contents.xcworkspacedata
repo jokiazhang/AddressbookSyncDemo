@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:TFAddressBook/TFAddressBook.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AddessBookSyncDemo_OSX/AddressBookSyncDemo_OSX.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:AddressBookSyncDemo_iOS/AddressBookSyncDemo_iOS.xcodeproj">
+   </FileRef>
+</Workspace>

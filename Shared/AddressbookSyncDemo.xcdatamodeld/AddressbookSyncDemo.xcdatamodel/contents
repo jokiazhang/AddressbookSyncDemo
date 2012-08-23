@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1807" systemVersion="12A269" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Contact" representedClassName="Contact" syncable="YES">
+        <attribute name="company" optional="YES" attributeType="String" syncable="YES" isSyncIdentityProperty="YES">
+            <userInfo/>
+        </attribute>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES" isSyncIdentityProperty="YES">
+            <userInfo/>
+        </attribute>
+        <attribute name="isCompany" attributeType="Boolean" defaultValueString="NO" syncable="YES" isSyncIdentityProperty="YES">
+            <userInfo/>
+        </attribute>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES" isSyncIdentityProperty="YES">
+            <userInfo/>
+        </attribute>
+        <attribute name="lastSync" optional="YES" attributeType="Date">
+            <userInfo/>
+        </attribute>
+        <attribute name="sortTag1" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="sortTag2" optional="YES" attributeType="String" indexed="YES" syncable="YES"/>
+    </entity>
+    <entity name="ContactMapping" representedClassName="ContactMapping" syncable="YES">
+        <attribute name="addressbookReference" attributeType="String" indexed="YES" syncable="YES"/>
+        <attribute name="contactURI" attributeType="Transformable" valueTransformerName="URLValueTransformer" indexed="YES" syncable="YES"/>
+    </entity>
+    <configuration name="LocalConfiguration">
+        <memberEntity name="ContactMapping"/>
+    </configuration>
+    <configuration name="SharedConfiguration">
+        <memberEntity name="Contact"/>
+    </configuration>
+    <elements>
+        <element name="Contact" positionX="261" positionY="189" width="128" height="150"/>
+        <element name="ContactMapping" positionX="160" positionY="192" width="128" height="75"/>
+    </elements>
+</model>
