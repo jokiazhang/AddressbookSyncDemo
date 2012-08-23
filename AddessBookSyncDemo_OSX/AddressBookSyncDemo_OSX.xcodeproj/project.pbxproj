@@ -35,7 +35,7 @@
 		E2179DFD15E53EC0006276EF /* AddressbookSyncDemo.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = E2179DFA15E53EC0006276EF /* AddressbookSyncDemo.entitlements */; };
 		E2179DFE15E53EC0006276EF /* AddressbookSyncDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2179DFB15E53EC0006276EF /* AddressbookSyncDemo.xcdatamodeld */; };
 		E2179E0615E5412C006276EF /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2179E0515E5412C006276EF /* AddressBook.framework */; };
-		E2179E0E15E56D90006276EF /* TFAddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2179E0D15E56D90006276EF /* TFAddressBook.framework */; };
+		E277D05615E6979C0020F43C /* TFAddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E277D05515E6979C0020F43C /* TFAddressBook.framework */; };
 		E294A11515E60E17006F847C /* ContactMappingCacheController.m in Sources */ = {isa = PBXBuildFile; fileRef = E294A11415E60E17006F847C /* ContactMappingCacheController.m */; };
 		E294A11C15E6108A006F847C /* ContactMapping.m in Sources */ = {isa = PBXBuildFile; fileRef = E294A11B15E6108A006F847C /* ContactMapping.m */; };
 /* End PBXBuildFile section */
@@ -94,6 +94,7 @@
 		E2179E0415E54108006276EF /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Global.h; path = ../../Shared/Global.h; sourceTree = "<group>"; };
 		E2179E0515E5412C006276EF /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		E2179E0D15E56D90006276EF /* TFAddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TFAddressBook.framework; path = ../TFAddressBook/build/Release/TFAddressBook.framework; sourceTree = "<group>"; };
+		E277D05515E6979C0020F43C /* TFAddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TFAddressBook.framework; path = "../../../../Library/Developer/Xcode/DerivedData/AddressBookSyncDemo-cmihdohbeaauxsaqarmkiuppwlja/Build/Products/Debug/TFAddressBook.framework"; sourceTree = "<group>"; };
 		E294A11315E60E17006F847C /* ContactMappingCacheController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactMappingCacheController.h; path = ../../Shared/ContactMappingCacheController.h; sourceTree = "<group>"; };
 		E294A11415E60E17006F847C /* ContactMappingCacheController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactMappingCacheController.m; path = ../../Shared/ContactMappingCacheController.m; sourceTree = "<group>"; };
 		E294A11A15E6108A006F847C /* ContactMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactMapping.h; path = ../../Shared/ContactMapping.h; sourceTree = "<group>"; };
@@ -105,7 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E2179E0E15E56D90006276EF /* TFAddressBook.framework in Frameworks */,
+				E277D05615E6979C0020F43C /* TFAddressBook.framework in Frameworks */,
 				E2179E0615E5412C006276EF /* AddressBook.framework in Frameworks */,
 				E2179D9B15E53DCD006276EF /* Cocoa.framework in Frameworks */,
 			);
@@ -117,6 +118,7 @@
 		E2179D8B15E53DCD006276EF = {
 			isa = PBXGroup;
 			children = (
+				E277D05515E6979C0020F43C /* TFAddressBook.framework */,
 				E2179DA015E53DCD006276EF /* AddessBookSyncDemo_OSX */,
 				E2179D9915E53DCD006276EF /* Frameworks */,
 				E2179D9715E53DCD006276EF /* Products */,
@@ -412,6 +414,10 @@
 				CODE_SIGN_ENTITLEMENTS = ../Shared/AddressbookSyncDemo.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer: Tom Fewster (26H8M8U3AJ)";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/AddressBookSyncDemo-cmihdohbeaauxsaqarmkiuppwlja/Build/Products/Debug\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AddessBookSyncDemo_OSX/AddressBookSyncDemo_OSX-Prefix.pch";
 				INFOPLIST_FILE = "AddessBookSyncDemo_OSX/AddressBookSyncDemo_OSX-Info.plist";
@@ -427,6 +433,10 @@
 				CODE_SIGN_ENTITLEMENTS = ../Shared/AddressbookSyncDemo.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer: Tom Fewster (26H8M8U3AJ)";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/AddressBookSyncDemo-cmihdohbeaauxsaqarmkiuppwlja/Build/Products/Debug\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AddessBookSyncDemo_OSX/AddressBookSyncDemo_OSX-Prefix.pch";
 				INFOPLIST_FILE = "AddessBookSyncDemo_OSX/AddressBookSyncDemo_OSX-Info.plist";

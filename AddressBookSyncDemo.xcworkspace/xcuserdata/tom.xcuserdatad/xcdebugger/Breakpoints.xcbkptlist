@@ -11,19 +11,6 @@
          timestampString = "367401363.967664"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "25"
-         endingLineNumber = "25"
-         landmarkName = "-identifierForContact:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Shared/ContactMappingCacheController.m"
-         timestampString = "367401363.967664"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
          startingLineNumber = "38"
          endingLineNumber = "38"
          landmarkName = "-setIdentifier:forContact:"
