@@ -74,7 +74,7 @@
 - (Contact *)contactObjectForIdentifier:(TFRecordID)identifier {
 	__block Contact *result = nil;
 	[MANAGED_OBJECT_CONTEXT performBlockAndWait:^{
-		NSSet *results = [MANAGED_OBJECT_CONTEXT fetchObjectsForEntityName:@"ContactMapping" withPredicate:[NSPredicate predicateWithFormat:@"addressBookReference == %@", identifier]];
+		NSSet *results = [MANAGED_OBJECT_CONTEXT fetchObjectsForEntityName:@"ContactMapping" withPredicate:[NSPredicate predicateWithFormat:@"addressbookReference == %@", identifier]];
 		if ([results count] != 0) {
 			ContactMapping *mapping = [results anyObject];
 			if (mapping.contactURI) {

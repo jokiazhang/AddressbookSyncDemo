@@ -15,13 +15,15 @@
 
 @interface AppDelegate ()
 @property (strong) IBOutlet NSArrayController *tableArrayController;
+@property (strong) TFAddressBook *addressbook;
+
 @end
 
 @implementation AppDelegate
 
 @synthesize window = _window;
 @synthesize personView;
-@synthesize contactSelectionIndex;
+@synthesize contactSelectionIndex = _contactSelectionIndex;
 @synthesize arrayController;
 @synthesize searchFilter;
 @synthesize ambigousContactResolver;
@@ -29,10 +31,14 @@
 @synthesize selectedContact;
 @synthesize coreDataController = _coreDataController;
 @synthesize tableArrayController = _tableArrayController;
+@synthesize addressbook = _addressbook;
 
 - (id)init {
-	_coreDataController = [[CoreDataController alloc] init];
-	return [super init];
+	if ((self = [super init])) {
+		_coreDataController = [[CoreDataController alloc] init];
+		_addressbook = [TFAddressBook addressBook];
+	}
+	return self;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -156,21 +162,21 @@
 }
 
 - (void)setContactSelectionIndex:(NSIndexSet *)value {
-	contactSelectionIndex = value;
-	if (_addressbook == nil) {
-		_addressbook = [TFAddressBook addressBook];
-	}
-	if ([contactSelectionIndex count] != 0) {
-		self.selectedContact = [[_tableArrayController arrangedObjects] objectAtIndex:[contactSelectionIndex firstIndex]];
-		TFRecord *record = [self.selectedContact addressbookRecordInAddressBook:_addressbook];
-		if (record == NULL) {
-			// Somthing is wrong, lets try to resolve it
-			[self resolveMissingContact:self.selectedContact inAddressBook:_addressbook];
-		} else {
-			[personView setPerson:(ABPerson *)record];
-		}
+	_contactSelectionIndex = value;
+	if ([_contactSelectionIndex count] != 0) {
+		self.selectedContact = [[_tableArrayController arrangedObjects] objectAtIndex:[_contactSelectionIndex firstIndex]];
+		[self.selectedContact addressbookRecordInAddressBook:_addressbook completionHandler:^(ABRecord *record) {
+			if (record == NULL) {
+				// Somthing is wrong, lets try to resolve it
+				[self resolveMissingContact:self.selectedContact inAddressBook:_addressbook];
+			} else {
+				[personView setPerson:(ABPerson *)record];
+			}
+
+		}];
 	} else {
 		self.selectedContact = nil;
+		[personView setPerson:nil];
 	}
 }
 

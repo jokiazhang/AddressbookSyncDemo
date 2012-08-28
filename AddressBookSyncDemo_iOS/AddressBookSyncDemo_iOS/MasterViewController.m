@@ -43,14 +43,13 @@
 		picker.modalPresentationStyle = UIModalPresentationFormSheet;
 	}
 	// Show the picker 
-	[self presentModalViewController:picker animated:YES];
+	[self presentViewController:picker animated:YES completion:^{}];
 }
 
 - (IBAction)destroyCache:(id)sender {
 	for (Contact *contact in [[self fetchedResultsController] fetchedObjects]) {
 		[[ContactMappingCacheController sharedInstance] removeIdentifierForContact:contact];
-#warning We should probably be able to do this?
-//		contact.addressbookIdentifier = nil;
+		contact.addressbookIdentifier = nil;
 	}
 	
 	[self.tableView reloadData];
@@ -101,26 +100,6 @@
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 	[[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-	[super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-	[super viewDidDisappear:animated];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -209,49 +188,49 @@
     return [sectionInfo name];
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	Contact *selectedObject = [[self fetchedResultsController] objectAtIndexPath:indexPath];
 	NSLog(@"Contact: %@\n\t{%@}\n\t{%@}\n\t{%@}\n\t{%@}", selectedObject.compositeName, selectedObject.phoneNumbers, selectedObject.emailAddresses, selectedObject.websites, selectedObject.addresses);
-	TFRecord *record = [selectedObject addressbookRecordInAddressBook:[TFAddressBook addressBook]];
-	if (record == NULL) {
-		// Somthing is wrong, lets try to resolve it
-		if (selectedObject.addressbookCacheState == kAddressbookCacheLoadFailed) {
-			[[[UIAlertView alloc] initWithTitle:@"Unmatched contact Details" message:@"The contact failed to match with address book entry" completionBlock:^(NSUInteger buttonIndex) {
-				switch(buttonIndex) {
-					case 0: // Cancelled
-						NSLog(@"Button 1");
-						break;
-					case 1: // Resolve Now
-						NSLog(@"Button 2");
-						[self performSegueWithIdentifier:@"UnmatchedContactConflictResolver" sender:selectedObject];
-						break;
-				}
-			} cancelButtonTitle:@"Later" otherButtonTitles:@"Resolve Now"] show];
-		} else if (selectedObject.addressbookCacheState == kAddressbookCacheLoadAmbigous) {
-			[[[UIAlertView alloc] initWithTitle:@"Ambigous Contact Details" message:@"The details for this contact are ambigous" completionBlock:^(NSUInteger buttonIndex) {
-				switch(buttonIndex) {
-					case 0: // Cancelled
-						NSLog(@"Button 1");
-						break;
-					case 1: // Resolve Now
-						[self performSegueWithIdentifier:@"AmbigousContactConflictResolver" sender:selectedObject];
-						NSLog(@"Button 2");
-						break;
-				}
-			} cancelButtonTitle:@"Later" otherButtonTitles:@"Resolve Now"] show];
-		}
-		[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
- 	} else {
-		UIViewController *personViewController = [ShowContactDetails viewControllerForDisplayingContact:selectedObject];
-		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
-			//self.detailViewController
-			UINavigationController *detailNavigationController = (UINavigationController *)[self.splitViewController.viewControllers lastObject];
-			detailNavigationController.viewControllers = [NSArray arrayWithObject:personViewController];
+	[selectedObject addressbookRecordInAddressBook:[TFAddressBook addressBook] completionHandler:^(TFRecord *record) {
+		if (record == NULL) {
+			// Somthing is wrong, lets try to resolve it
+			if (selectedObject.addressbookCacheState == kAddressbookCacheLoadFailed) {
+				[[[UIAlertView alloc] initWithTitle:@"Unmatched contact Details" message:@"The contact failed to match with address book entry" completionBlock:^(NSUInteger buttonIndex) {
+					switch(buttonIndex) {
+						case 0: // Cancelled
+							NSLog(@"Button 1");
+							break;
+						case 1: // Resolve Now
+							NSLog(@"Button 2");
+							[self performSegueWithIdentifier:@"UnmatchedContactConflictResolver" sender:selectedObject];
+							break;
+					}
+				} cancelButtonTitle:@"Later" otherButtonTitles:@"Resolve Now"] show];
+			} else if (selectedObject.addressbookCacheState == kAddressbookCacheLoadAmbigous) {
+				[[[UIAlertView alloc] initWithTitle:@"Ambigous Contact Details" message:@"The details for this contact are ambigous" completionBlock:^(NSUInteger buttonIndex) {
+					switch(buttonIndex) {
+						case 0: // Cancelled
+							NSLog(@"Button 1");
+							break;
+						case 1: // Resolve Now
+							[self performSegueWithIdentifier:@"AmbigousContactConflictResolver" sender:selectedObject];
+							NSLog(@"Button 2");
+							break;
+					}
+				} cancelButtonTitle:@"Later" otherButtonTitles:@"Resolve Now"] show];
+			}
+			[self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 		} else {
-			[self.navigationController pushViewController:personViewController animated:YES];
+			UIViewController *personViewController = [ShowContactDetails viewControllerForDisplayingContact:selectedObject];
+			if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+				//self.detailViewController
+				UINavigationController *detailNavigationController = (UINavigationController *)[self.splitViewController.viewControllers lastObject];
+				detailNavigationController.viewControllers = [NSArray arrayWithObject:personViewController];
+			} else {
+				[self.navigationController pushViewController:personViewController animated:YES];
+			}
 		}
-	}
+	}];
 /*
 	if ([selectedObject findAddressbookRecord] != NULL) {
 		UIViewController *personViewController = [ShowContactDetails viewControllerForDisplayingContact:selectedObject];
@@ -410,8 +389,8 @@
 // Displays the information of a selected person
 - (BOOL)peoplePickerNavigationController:(ABPeoplePickerNavigationController *)peoplePicker shouldContinueAfterSelectingPerson:(ABRecordRef)person
 {
-	[self dismissModalViewControllerAnimated:YES];
-	
+	[self dismissViewControllerAnimated:YES completion:^{}];
+
 	// Check if we already have this contact in out object tree
 	NSString *uniqueId = [NSString stringWithFormat:@"%d", ABRecordGetRecordID(person)];
 	if ([Contact findContactForRecordId:uniqueId] != nil) {
@@ -443,6 +422,6 @@
 // Dismisses the people picker and shows the application when users tap Cancel. 
 - (void)peoplePickerNavigationControllerDidCancel:(ABPeoplePickerNavigationController *)peoplePicker;
 {
-	[self dismissModalViewControllerAnimated:YES];
+	[self dismissViewControllerAnimated:YES completion:^{}];
 }
 @end

@@ -34,7 +34,6 @@ extern NSString *kContactSyncStateChangedNotification;
 @property (nonatomic, strong) NSString * sortTag1;
 @property (nonatomic, strong) NSString * sortTag2;
 
-@property (assign) AddressbookCacheState addressbookCacheState;
 @property (nonatomic, readonly) NSArray *ambigousContactMatches;
 
 @property (strong, nonatomic, readonly) NSString *compositeName;
@@ -43,7 +42,9 @@ extern NSString *kContactSyncStateChangedNotification;
 
 @property (strong, nonatomic, readonly) NSString *groupingIndexCharacter;
 
-@property (nonatomic, strong) TFRecordID addressbookIdentifier;
+@property (assign) AddressbookCacheState addressbookCacheState;
+@property (strong) TFRecordID addressbookIdentifier;
+@property (assign) BOOL addressbookIdentifierChanged;
 
 @property (strong, nonatomic, readonly) NSArray *phoneNumbers;
 @property (strong, nonatomic, readonly) NSArray *emailAddresses;
@@ -59,5 +60,6 @@ extern NSString *kContactSyncStateChangedNotification;
 - (BOOL)isContactOlderThanAddressbookRecord:(TFRecord *)record;
 - (void)resolveConflictWithAddressbookRecordId:(TFRecordID)recordId;
 - (TFRecord *)addressbookRecordInAddressBook:(TFAddressBook *)addressBook;
+- (void)addressbookRecordInAddressBook:(TFAddressBook *)addressBook completionHandler:(void(^)(TFRecord *record))completionHandler;
 
 @end

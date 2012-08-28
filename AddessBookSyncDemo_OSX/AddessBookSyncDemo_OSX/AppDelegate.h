@@ -15,9 +15,7 @@
 @class Contact;
 @class CoreDataController;
 
-@interface AppDelegate : NSObject <NSApplicationDelegate> {
-	TFAddressBook *_addressbook;
-}
+@interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 

@@ -1531,7 +1531,6 @@
 											<int key="NSvFlags">266</int>
 											<string key="NSFrame">{{9, 421}, {158, 22}}</string>
 											<reference key="NSSuperview" ref="828902311"/>
-											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="585143109"/>
 											<string key="NSReuseIdentifierKey">_NS:918</string>
 											<bool key="NSEnabled">YES</bool>
@@ -1616,7 +1615,6 @@
 															<array class="NSMutableArray" key="NSSubviews"/>
 															<string key="NSFrameSize">{175, 400}</string>
 															<reference key="NSSuperview" ref="711449194"/>
-															<reference key="NSWindow"/>
 															<reference key="NSNextKeyView" ref="346398139"/>
 															<string key="NSReuseIdentifierKey">_NS:1828</string>
 															<bool key="NSEnabled">YES</bool>
@@ -1627,7 +1625,6 @@
 																<int key="NSvFlags">256</int>
 																<string key="NSFrameSize">{175, 17}</string>
 																<reference key="NSSuperview" ref="65463645"/>
-																<reference key="NSWindow"/>
 																<reference key="NSNextKeyView" ref="711449194"/>
 																<string key="NSReuseIdentifierKey">_NS:1830</string>
 																<reference key="NSTableView" ref="140535566"/>
@@ -1713,7 +1710,6 @@
 													</array>
 													<string key="NSFrame">{{0, 17}, {175, 400}}</string>
 													<reference key="NSSuperview" ref="585143109"/>
-													<reference key="NSWindow"/>
 													<reference key="NSNextKeyView" ref="140535566"/>
 													<string key="NSReuseIdentifierKey">_NS:1826</string>
 													<reference key="NSDocView" ref="140535566"/>
@@ -1725,7 +1721,6 @@
 													<int key="NSvFlags">-2147483392</int>
 													<string key="NSFrame">{{224, 17}, {15, 102}}</string>
 													<reference key="NSSuperview" ref="585143109"/>
-													<reference key="NSWindow"/>
 													<reference key="NSNextKeyView" ref="500952087"/>
 													<string key="NSReuseIdentifierKey">_NS:1845</string>
 													<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -1738,7 +1733,6 @@
 													<int key="NSvFlags">-2147483392</int>
 													<string key="NSFrame">{{1, 119}, {223, 15}}</string>
 													<reference key="NSSuperview" ref="585143109"/>
-													<reference key="NSWindow"/>
 													<reference key="NSNextKeyView" ref="198836543"/>
 													<string key="NSReuseIdentifierKey">_NS:1847</string>
 													<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -1755,7 +1749,6 @@
 													</array>
 													<string key="NSFrameSize">{175, 17}</string>
 													<reference key="NSSuperview" ref="585143109"/>
-													<reference key="NSWindow"/>
 													<reference key="NSNextKeyView" ref="1007680693"/>
 													<string key="NSReuseIdentifierKey">_NS:1831</string>
 													<reference key="NSDocView" ref="1007680693"/>
@@ -1765,7 +1758,6 @@
 											</array>
 											<string key="NSFrameSize">{175, 417}</string>
 											<reference key="NSSuperview" ref="828902311"/>
-											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="65463645"/>
 											<string key="NSReuseIdentifierKey">_NS:1824</string>
 											<int key="NSsFlags">133680</int>
@@ -1781,7 +1773,6 @@
 									</array>
 									<string key="NSFrameSize">{175, 448}</string>
 									<reference key="NSSuperview" ref="76977462"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="621372972"/>
 									<string key="NSReuseIdentifierKey">_NS:1165</string>
 									<string key="NSClassName">NSView</string>
@@ -1795,7 +1786,6 @@
 											<int key="NSvFlags">10</int>
 											<string key="NSFrame">{{0, 414}, {459, 5}}</string>
 											<reference key="NSSuperview" ref="198836543"/>
-											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView" ref="805471279"/>
 											<string key="NSReuseIdentifierKey">_NS:2411</string>
 											<string key="NSOffsets">{0, 0}</string>
@@ -1820,7 +1810,6 @@
 											<int key="NSvFlags">265</int>
 											<string key="NSFrame">{{394, 414}, {64, 32}}</string>
 											<reference key="NSSuperview" ref="198836543"/>
-											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView"/>
 											<string key="NSReuseIdentifierKey">_NS:687</string>
 											<bool key="NSEnabled">YES</bool>
@@ -1851,14 +1840,12 @@
 											<array class="NSMutableArray" key="NSSubviews"/>
 											<string key="NSFrameSize">{467, 417}</string>
 											<reference key="NSSuperview" ref="198836543"/>
-											<reference key="NSWindow"/>
 											<reference key="NSNextKeyView"/>
 											<string key="NSReuseIdentifierKey">_NS:9</string>
 										</object>
 									</array>
 									<string key="NSFrame">{{176, 0}, {487, 448}}</string>
 									<reference key="NSSuperview" ref="76977462"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="553058604"/>
 									<string key="NSReuseIdentifierKey">_NS:1167</string>
 									<string key="NSClassName">NSView</string>
@@ -1866,7 +1853,6 @@
 							</array>
 							<string key="NSFrameSize">{663, 448}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="828902311"/>
 							<string key="NSReuseIdentifierKey">_NS:1163</string>
 							<bool key="NSIsVertical">YES</bool>
@@ -1875,7 +1861,6 @@
 					</array>
 					<string key="NSFrameSize">{633, 448}</string>
 					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="76977462"/>
 				</object>
 				<string key="NSScreenRect">{{0, 0}, {1440, 878}}</string>
@@ -1891,7 +1876,6 @@
 					<string key="NSEntityName">Contact</string>
 				</object>
 				<bool key="_NSIsUsingManagedProxy">YES</bool>
-				<bool key="NSAvoidsEmptySelection">YES</bool>
 				<bool key="NSPreservesSelection">YES</bool>
 				<bool key="NSSelectsInsertedObjects">YES</bool>
 				<bool key="NSFilterRestrictsInsertion">YES</bool>
@@ -2615,20 +2599,20 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
-						<string key="label">selectionIndexes: contactSelectionIndex</string>
+						<string key="label">selectionIndexes: selectionIndexes</string>
 						<reference key="source" ref="140535566"/>
-						<reference key="destination" ref="976324537"/>
+						<reference key="destination" ref="620091914"/>
 						<object class="NSNibBindingConnector" key="connector">
 							<reference key="NSSource" ref="140535566"/>
-							<reference key="NSDestination" ref="976324537"/>
-							<string key="NSLabel">selectionIndexes: contactSelectionIndex</string>
+							<reference key="NSDestination" ref="620091914"/>
+							<string key="NSLabel">selectionIndexes: selectionIndexes</string>
 							<string key="NSBinding">selectionIndexes</string>
-							<string key="NSKeyPath">contactSelectionIndex</string>
+							<string key="NSKeyPath">selectionIndexes</string>
 							<reference key="NSPreviousConnector" ref="307257764"/>
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">676</int>
+					<int key="connectionID">681</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -2661,6 +2645,22 @@
 						</object>
 					</object>
 					<int key="connectionID">667</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBBindingConnection" key="connection">
+						<string key="label">selectionIndexes: contactSelectionIndex</string>
+						<reference key="source" ref="620091914"/>
+						<reference key="destination" ref="976324537"/>
+						<object class="NSNibBindingConnector" key="connector">
+							<reference key="NSSource" ref="620091914"/>
+							<reference key="NSDestination" ref="976324537"/>
+							<string key="NSLabel">selectionIndexes: contactSelectionIndex</string>
+							<string key="NSBinding">selectionIndexes</string>
+							<string key="NSKeyPath">contactSelectionIndex</string>
+							<int key="NSNibBindingConnectorVersion">2</int>
+						</object>
+					</object>
+					<int key="connectionID">683</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
@@ -4298,232 +4298,9 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">676</int>
+			<int key="maxID">683</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">AmbigousContactResolverViewController</string>
-					<string key="superclassName">NSViewController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="later:">id</string>
-						<string key="resolve:">id</string>
-						<string key="resolveConflict:">Contact</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="later:">
-							<string key="name">later:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="resolve:">
-							<string key="name">resolve:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="resolveConflict:">
-							<string key="name">resolveConflict:</string>
-							<string key="candidateClassName">Contact</string>
-						</object>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="arrayController">NSArrayController</string>
-						<string key="documentWindow">NSWindow</string>
-						<string key="objectSheet">NSPanel</string>
-						<string key="personView">ABPersonView</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="arrayController">
-							<string key="name">arrayController</string>
-							<string key="candidateClassName">NSArrayController</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="documentWindow">
-							<string key="name">documentWindow</string>
-							<string key="candidateClassName">NSWindow</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="objectSheet">
-							<string key="name">objectSheet</string>
-							<string key="candidateClassName">NSPanel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="personView">
-							<string key="name">personView</string>
-							<string key="candidateClassName">ABPersonView</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/AmbigousContactResolverViewController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">AppDelegate</string>
-					<string key="superclassName">NSObject</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="saveAction:">id</string>
-						<string key="toggelEdit:">NSButton</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="saveAction:">
-							<string key="name">saveAction:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="toggelEdit:">
-							<string key="name">toggelEdit:</string>
-							<string key="candidateClassName">NSButton</string>
-						</object>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="ambigousContactResolver">AmbigousContactResolverViewController</string>
-						<string key="arrayController">NSArrayController</string>
-						<string key="personView">ABPersonView</string>
-						<string key="tableArrayController">NSArrayController</string>
-						<string key="unresolvedContactResolver">UnresolvedContactResolverViewController</string>
-						<string key="window">NSWindow</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="ambigousContactResolver">
-							<string key="name">ambigousContactResolver</string>
-							<string key="candidateClassName">AmbigousContactResolverViewController</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="arrayController">
-							<string key="name">arrayController</string>
-							<string key="candidateClassName">NSArrayController</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="personView">
-							<string key="name">personView</string>
-							<string key="candidateClassName">ABPersonView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="tableArrayController">
-							<string key="name">tableArrayController</string>
-							<string key="candidateClassName">NSArrayController</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="unresolvedContactResolver">
-							<string key="name">unresolvedContactResolver</string>
-							<string key="candidateClassName">UnresolvedContactResolverViewController</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="window">
-							<string key="name">window</string>
-							<string key="candidateClassName">NSWindow</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/AppDelegate.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">Contact</string>
-					<string key="superclassName">NSManagedObject</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/Contact.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">SelectContactSheetController</string>
-					<string key="superclassName">NSObject</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="addContact:">id</string>
-						<string key="cancelOperation:">id</string>
-						<string key="complete:">id</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="addContact:">
-							<string key="name">addContact:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="cancelOperation:">
-							<string key="name">cancelOperation:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="complete:">
-							<string key="name">complete:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="documentWindow">NSWindow</string>
-						<string key="objectSheet">NSPanel</string>
-						<string key="peoplePicker">ABPeoplePickerView</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="documentWindow">
-							<string key="name">documentWindow</string>
-							<string key="candidateClassName">NSWindow</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="objectSheet">
-							<string key="name">objectSheet</string>
-							<string key="candidateClassName">NSPanel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="peoplePicker">
-							<string key="name">peoplePicker</string>
-							<string key="candidateClassName">ABPeoplePickerView</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/SelectContactSheetController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">UIWindow</string>
-					<string key="superclassName">UIView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/UIWindow.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">UnresolvedContactResolverViewController</string>
-					<string key="superclassName">NSViewController</string>
-					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="later:">id</string>
-						<string key="resolve:">id</string>
-						<string key="resolveConflict:">Contact</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="later:">
-							<string key="name">later:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="resolve:">
-							<string key="name">resolve:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="resolveConflict:">
-							<string key="name">resolveConflict:</string>
-							<string key="candidateClassName">Contact</string>
-						</object>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="arrayController">NSArrayController</string>
-						<string key="documentWindow">NSWindow</string>
-						<string key="objectSheet">NSPanel</string>
-						<string key="personView">ABPersonView</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="arrayController">
-							<string key="name">arrayController</string>
-							<string key="candidateClassName">NSArrayController</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="documentWindow">
-							<string key="name">documentWindow</string>
-							<string key="candidateClassName">NSWindow</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="objectSheet">
-							<string key="name">objectSheet</string>
-							<string key="candidateClassName">NSPanel</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="personView">
-							<string key="name">personView</string>
-							<string key="candidateClassName">ABPersonView</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/UnresolvedContactResolverViewController.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>

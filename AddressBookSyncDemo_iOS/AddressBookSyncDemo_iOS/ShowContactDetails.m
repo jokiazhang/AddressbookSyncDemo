@@ -31,7 +31,8 @@
 
 - (UIViewController *)view {
 	if (self.contact.addressbookIdentifier) {
-		ABAddressBookRef addressBook = ABAddressBookCreate();
+		CFErrorRef error = nil;
+		ABAddressBookRef addressBook = ABAddressBookCreateWithOptions(NULL, &error);
 		
 		ABRecordID recordId = [self.contact.addressbookIdentifier integerValue];
 		if (recordId == 0 && (errno == EINVAL || errno == ERANGE)) {
@@ -92,7 +93,7 @@
 // Dismisses the new-person view controller. 
 - (void)newPersonViewController:(ABNewPersonViewController *)newPersonViewController didCompleteWithNewPerson:(ABRecordRef)person
 {
-	[self.parentViewController dismissModalViewControllerAnimated:YES];
+	[self.parentViewController dismissViewControllerAnimated:YES completion:^{}];
 }
 
 
@@ -100,7 +101,7 @@
 // Dismisses the picker when users are done creating a contact or adding the displayed person properties to an existing contact. 
 - (void)unknownPersonViewController:(ABUnknownPersonViewController *)unknownPersonView didResolveToPerson:(ABRecordRef)person
 {
-	[self.parentViewController dismissModalViewControllerAnimated:YES];
+	[self.parentViewController dismissViewControllerAnimated:YES completion:^{}];
 }
 
 

@@ -16,7 +16,11 @@
 @synthesize label = _label;
 
 - (NSString *)description {
+#if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
+	return [NSString stringWithFormat:@"{%@: %@ [%d]}", _label, _value, _identifier];
+#else
 	return [NSString stringWithFormat:@"{%@: %@ [%@]}", _label, _value, _identifier];
+#endif
 }
 
 - (void)populateWithProperties:(TFMultiValue *)properties reference:(TFMultiValueIdentifier)reference {

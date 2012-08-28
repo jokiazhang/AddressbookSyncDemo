@@ -11,21 +11,26 @@
 #import <AddressBook/ABPersonView.h>
 #import <TFAddressBook/TFABAddressBook.h>
 
+@interface UnresolvedContactResolverViewController ()
+@property (strong) TFAddressBook *addressbook;
+@end
+
 @implementation UnresolvedContactResolverViewController
 
 @synthesize documentWindow;
 @synthesize objectSheet;
-@synthesize contactSelectionIndex;
+@synthesize contactSelectionIndex = _contactSelectionIndex;
 @synthesize arrayController;
 @synthesize personView;
-@synthesize contact;
+@synthesize contact = _contact;
 @synthesize ambigousContacts;
-@synthesize _people;
+@synthesize people = _people;
+@synthesize addressbook = _addressbook;
 
 - (void)awakeFromNib {
 	// since we will only ever have one window, we can do this
 	documentWindow = [[NSApplication sharedApplication] keyWindow];
-	addressbook = [TFAddressBook addressBook];
+	_addressbook = [TFAddressBook addressBook];
 	[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(documentWindowWillClose:) name:NSWindowWillCloseNotification object:documentWindow];
 }
 
@@ -34,10 +39,10 @@
 }
 
 - (IBAction)resolveConflict:(Contact *)c {
-	self.contact = c;
+	_contact = c;
 	
 	NSMutableArray *p = [NSMutableArray array];
-	NSArray *people = [addressbook people];
+	NSArray *people = [_addressbook people];
 	for (TFPerson *record in [people sortedArrayUsingDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"compositeName" ascending:YES]]]) {
 		[p addObject:[record uniqueId]];
 		NSLog(@"%@", [record compositeName]);
@@ -86,9 +91,9 @@
 
 
 - (void)setContactSelectionIndex:(NSIndexSet *)value {
-	contactSelectionIndex = value;
-	if ([contactSelectionIndex count] != 0) {
-		ABPerson *selected = (ABPerson *)[addressbook recordForUniqueId:[self.arrayController.arrangedObjects objectAtIndex:[contactSelectionIndex firstIndex]]];
+	_contactSelectionIndex = value;
+	if ([_contactSelectionIndex count] != 0) {
+		ABPerson *selected = (ABPerson *)[_addressbook recordForUniqueId:[self.arrayController.arrangedObjects objectAtIndex:[_contactSelectionIndex firstIndex]]];
 		NSLog(@"Selected: '%@'", selected.compositeName);
 		[personView setPerson:(ABPerson *)selected];
 	} else {

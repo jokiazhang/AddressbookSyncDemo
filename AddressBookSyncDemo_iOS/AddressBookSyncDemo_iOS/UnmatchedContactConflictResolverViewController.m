@@ -30,11 +30,11 @@
 	if (recordId != kABRecordInvalidID) {
 		[contact resolveConflictWithAddressbookRecordId:[NSString stringWithFormat:@"%d", recordId]];
 	}
-	[self dismissModalViewControllerAnimated:YES];
+	[self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 - (IBAction)cancel:(id)sender {
-	[self dismissModalViewControllerAnimated:YES];
+	[self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 - (void)didReceiveMemoryWarning
@@ -62,7 +62,7 @@
 	titleView.layer.shadowOpacity = 0.5;
 	[self.view bringSubviewToFront:titleView];
 	
-	_addressbook = ABAddressBookCreate();
+	_addressbook = ABAddressBookCreateWithOptions(nil, nil);
 	NSArray *allContacts = (__bridge_transfer NSArray *)ABAddressBookCopyArrayOfAllPeopleInSourceWithSortOrdering(_addressbook, nil, ABPersonGetSortOrdering());
 	
 	NSMutableDictionary *sectionIndexLetter = [NSMutableDictionary dictionary];

@@ -7,15 +7,11 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <TFAddressBook/TFABAddressBook.h>
 
 @class Contact;
 @class ABPersonView;
 
-@interface UnresolvedContactResolverViewController : NSViewController {
-	NSArray *_people;
-	TFAddressBook *addressbook;
-}
+@interface UnresolvedContactResolverViewController : NSViewController
 
 @property (nonatomic, strong) IBOutlet NSWindow *documentWindow;
 @property (nonatomic, strong) IBOutlet NSPanel *objectSheet;
@@ -24,7 +20,7 @@
 @property (nonatomic, retain) NSIndexSet *contactSelectionIndex;
 @property (nonatomic, strong) Contact *contact;
 @property (strong) NSArray *ambigousContacts;
-@property (strong, readonly, getter = people) NSArray *_people;
+@property (strong, readonly) NSArray *people;
 
 - (IBAction)resolveConflict:(Contact *)contact;
 - (IBAction)later:(id)sender;

@@ -29,11 +29,11 @@
 - (IBAction)done:(id)sender {
 	TFRecord *record = [contact.ambigousContactMatches objectAtIndex:[self.tableView indexPathForSelectedRow].row];
 	[contact resolveConflictWithAddressbookRecordId:[record uniqueId]];
-	[self dismissModalViewControllerAnimated:YES];
+	[self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 - (IBAction)cancel:(id)sender {
-	[self dismissModalViewControllerAnimated:YES];
+	[self dismissViewControllerAnimated:YES completion:^{}];
 }
 
 - (void)didReceiveMemoryWarning
