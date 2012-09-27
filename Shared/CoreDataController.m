@@ -1,12 +1,13 @@
 
 
+
 #import "CoreDataController.h"
 //#import "AppDelegate.h"
 
-NSString * kiCloudPersistentStoreFilename = @"iCloudStore.sqlite";
-NSString * kFallbackPersistentStoreFilename = @"fallbackStore.sqlite"; //used when iCloud is not available
-NSString * kSeedStoreFilename = @"seedStore.sqlite"; //holds the seed person records
-NSString * kLocalStoreFilename = @"localStore.sqlite"; //holds the states information
+NSString * kiCloudPersistentStoreFilename = @"iCloudStore2.sqlite";
+NSString * kFallbackPersistentStoreFilename = @"fallbackStore2.sqlite"; //used when iCloud is not available
+NSString * kSeedStoreFilename = @"seedStore2.sqlite"; //holds the seed person records
+NSString * kLocalStoreFilename = @"localStore2.sqlite"; //holds the states information
 
 #define SEED_ICLOUD_STORE NO
 //#define FORCE_FALLBACK_STORE

@@ -22,7 +22,7 @@
 }
 
 - (TFRecordID)identifierForContact:(Contact *)contact {
-	NSURL *uri = [contact.objectID URIRepresentation];
+	NSURL *uri = [[contact objectID] URIRepresentation];
 	
 	__block TFRecordID result = nil;
 	[MANAGED_OBJECT_CONTEXT performBlockAndWait:^{
@@ -35,7 +35,12 @@
 }
 
 - (void)setIdentifier:(TFRecordID)identifier forContact:(Contact *)contact {
-	NSURL *key = [contact.objectID URIRepresentation];
+	if ([[contact objectID] isTemporaryID]) {
+		WarningLog(@"Can't save Contact mapping, contact is only temporary");
+		return;
+	}
+
+	NSURL *key = [[contact objectID ] URIRepresentation];
 
 	[MANAGED_OBJECT_CONTEXT performBlock:^{
 		NSSet *results = [MANAGED_OBJECT_CONTEXT fetchObjectsForEntityName:@"ContactMapping" withPredicate:[NSPredicate predicateWithFormat:@"contactURI == %@", key]];
