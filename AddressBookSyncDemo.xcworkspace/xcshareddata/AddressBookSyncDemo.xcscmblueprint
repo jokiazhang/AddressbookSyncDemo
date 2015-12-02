@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FA23932A1B6A9CF767D40245C95A4972319FB79B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "FA23932A1B6A9CF767D40245C95A4972319FB79B" : 0,
+    "5DD3CC4182ED621240C150426A09D12D748DB87D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "1367AC7D-F30D-4741-9E62-776905CB730F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "FA23932A1B6A9CF767D40245C95A4972319FB79B" : "AddressBook\/",
+    "5DD3CC4182ED621240C150426A09D12D748DB87D" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AddressBookSyncDemo",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AddressBookSyncDemo.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/hummersoftware\/easy-address-book-manager-export-clean-group-edit.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5DD3CC4182ED621240C150426A09D12D748DB87D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jokiazhang\/AddressbookSyncDemo.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FA23932A1B6A9CF767D40245C95A4972319FB79B"
+    }
+  ]
+}
